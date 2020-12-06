@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/nav_home">
+
+    <fragment
+            android:id="@+id/nav_home"
+            android:name="com.example.wirelessstorage.ui.home.HomeFragment"
+            android:label="@string/home"
+            tools:layout="@layout/fragment_home"/>
+    <fragment
+            android:id="@+id/nav_setting"
+            android:name="com.example.wirelessstorage.ui.setting.SettingFragment"
+            android:label="@string/setting"/>
+    <fragment
+            android:id="@+id/nav_storage"
+            android:name="com.example.wirelessstorage.ui.storage.StorageFragment"
+            android:label="@string/storage"
+            tools:layout="@layout/fragment_storage"/>
+    <fragment
+            android:id="@+id/nav_task"
+            android:name="com.example.wirelessstorage.ui.task.TaskFragment"
+            android:label="@string/tasks"
+            tools:layout="@layout/fragment_task"/>
+    <fragment
+            android:id="@+id/nav_about"
+            android:name="com.example.wirelessstorage.ui.about.AboutFragment"
+            android:label="@string/about"
+            tools:layout="@layout/fragment_about"/>
+    <fragment android:id="@+id/nav_device" android:name="com.example.wirelessstorage.ui.device.DeviceFragment"
+              android:label="@string/devices" tools:layout="@layout/fragment_device"/>
+
+</navigation>

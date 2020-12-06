@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+    <color name="colorTabSelect">@color/colorAccent</color>
+    <color name="appBarColor">@color/colorPrimaryDark</color>
+
+</resources>

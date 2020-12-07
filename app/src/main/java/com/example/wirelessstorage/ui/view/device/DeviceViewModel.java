@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.device;
+package com.example.wirelessstorage.ui.view.device;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;

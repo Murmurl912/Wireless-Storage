@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.device;
+package com.example.wirelessstorage.ui.view.device;
 
 import android.os.Bundle;
 import android.view.*;
@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.wirelessstorage.R;
-import com.example.wirelessstorage.ui.storage.StorageViewModel;
 
 public class DeviceFragment extends Fragment {
 
@@ -42,10 +41,6 @@ public class DeviceFragment extends Fragment {
         deviceContainer = root.findViewById(R.id.device_container);
         deviceContainer.setAdapter((adapter = new DeviceAdapter()));
 
-        model.devices().observe(getViewLifecycleOwner(), devices -> {
-            adapter.setDevices(devices);
-            adapter.notifyDataSetChanged();
-        });
         return root;
     }
 
@@ -53,5 +48,10 @@ public class DeviceFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         model = new ViewModelProvider(this).get(DeviceViewModel.class);
+
+        model.devices().observe(getViewLifecycleOwner(), devices -> {
+            adapter.setDevices(devices);
+            adapter.notifyDataSetChanged();
+        });
     }
 }

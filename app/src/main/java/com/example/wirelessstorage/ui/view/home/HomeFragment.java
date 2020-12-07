@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.home;
+package com.example.wirelessstorage.ui.view.home;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -6,8 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
-import android.net.NetworkInfo;
-import android.net.wifi.WifiManager;
 import android.net.wifi.WpsInfo;
 import android.net.wifi.p2p.*;
 import android.os.Bundle;
@@ -18,27 +16,14 @@ import android.view.*;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.wirelessstorage.R;
-import com.github.mikephil.charting.charts.Chart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.formatter.ValueFormatter;
-import com.google.android.material.tabs.TabLayout;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Random;
 
 public class HomeFragment extends Fragment {
 
@@ -61,6 +46,7 @@ public class HomeFragment extends Fragment {
 
     private WifiP2pManager manager;
     private WifiP2pManager.Channel channel;
+
     private final BroadcastReceiver receiver = new BroadcastReceiver() {
         @SuppressLint("DefaultLocale")
         @Override

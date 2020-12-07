@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.home;
+package com.example.wirelessstorage.ui.view.home;
 
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineDataSet;

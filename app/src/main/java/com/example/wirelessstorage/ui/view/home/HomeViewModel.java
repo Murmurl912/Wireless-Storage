@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.home;
+package com.example.wirelessstorage.ui.view.home;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.net.TrafficStats;
 import android.os.Environment;
 import android.os.StatFs;
-import android.util.Log;
 import androidx.annotation.UiThread;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
@@ -15,12 +14,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.*;
 
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 

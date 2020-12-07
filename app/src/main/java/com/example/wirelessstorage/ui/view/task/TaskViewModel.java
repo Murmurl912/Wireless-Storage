@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.task;
+package com.example.wirelessstorage.ui.view.task;
 
 import androidx.lifecycle.ViewModel;
 

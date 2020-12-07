@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.device;
+package com.example.wirelessstorage.ui.view.device;
 
 import android.view.LayoutInflater;
 import android.view.View;

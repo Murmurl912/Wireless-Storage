@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.setting;
+package com.example.wirelessstorage.ui.view.setting;
 
 import android.os.Bundle;
 

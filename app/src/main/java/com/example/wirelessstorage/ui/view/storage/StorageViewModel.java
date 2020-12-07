@@ -1,4 +1,4 @@
-package com.example.wirelessstorage.ui.storage;
+package com.example.wirelessstorage.ui.view.storage;
 
 import androidx.lifecycle.ViewModel;
 

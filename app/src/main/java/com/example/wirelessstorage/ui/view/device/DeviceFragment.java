@@ -31,7 +31,7 @@ public class DeviceFragment extends Fragment {
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
-        inflater.inflate(R.menu.storage, menu);
+        inflater.inflate(R.menu.device, menu);
     }
 
     @Override

@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceViewHolder> {
+public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.DeviceViewHolder> {
 
     private final List<Map<String, String>> devices;
 
-    public DeviceAdapter() {
+    public DeviceListAdapter() {
         devices = new ArrayList<>();
     }
 

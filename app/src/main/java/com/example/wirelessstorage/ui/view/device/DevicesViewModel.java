@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DeviceViewModel extends ViewModel {
+public class DevicesViewModel extends ViewModel {
 
 
     private MutableLiveData<List<Map<String, String>>> devices;

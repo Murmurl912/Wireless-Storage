@@ -9,16 +9,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 import com.example.wirelessstorage.R;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
-public class DeviceFragment extends Fragment {
+public class DevicesFragment extends Fragment {
 
-    private DeviceViewModel model;
-    private RecyclerView deviceContainer;
-    private DeviceAdapter adapter;
+    private DevicesViewModel model;
+    private ViewPager2 pager2;
+    private TabLayout tabLayout;
 
-    public static DeviceFragment newInstance() {
-        return new DeviceFragment();
+    public static DevicesFragment newInstance() {
+        return new DevicesFragment();
     }
 
     @Override
@@ -37,21 +40,15 @@ public class DeviceFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_device, container, false);
-        deviceContainer = root.findViewById(R.id.device_container);
-        deviceContainer.setAdapter((adapter = new DeviceAdapter()));
-
+        View root = inflater.inflate(R.layout.fragment_devices, container, false);
+        pager2 = root.findViewById(R.id.view_pager);
+        tabLayout = root.findViewById(R.id.tab_layout);
         return root;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        model = new ViewModelProvider(this).get(DeviceViewModel.class);
-
-        model.devices().observe(getViewLifecycleOwner(), devices -> {
-            adapter.setDevices(devices);
-            adapter.notifyDataSetChanged();
-        });
+        model = new ViewModelProvider(this).get(DevicesViewModel.class);
     }
 }

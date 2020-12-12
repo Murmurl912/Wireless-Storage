@@ -9,10 +9,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.wirelessstorage.R;
+import com.example.wirelessstorage.ui.view.tab.TabView;
 
 public class StorageFragment extends Fragment {
 
     private StorageViewModel model;
+    private TabView tabView;
 
     public static StorageFragment newInstance() {
         return new StorageFragment();
@@ -28,7 +30,8 @@ public class StorageFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_storage, container, false);
-
+        tabView = root.findViewById(R.id.tab_layout);
+        tabView.setup(this);
         root.postDelayed(()->{
             model = new ViewModelProvider(this).get(StorageViewModel.class);
         }, 500);

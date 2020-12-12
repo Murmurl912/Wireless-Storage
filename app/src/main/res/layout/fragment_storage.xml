@@ -2,21 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
              xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.view.storage.StorageFragment">
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.view.storage.StorageFragment">
 
-    <LinearLayout
-            android:orientation="vertical"
+    <com.example.wirelessstorage.ui.view.tab.TabView
+            android:id="@+id/tab_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <com.google.android.flexbox.FlexboxLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-        </com.google.android.flexbox.FlexboxLayout>
-
-    </LinearLayout>
+            android:layout_height="match_parent"/>
 
 </FrameLayout>
